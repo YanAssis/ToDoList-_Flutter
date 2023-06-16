@@ -7,7 +7,8 @@ import '../models/tarefas.dart';
 import '../providers/userProvider.dart';
 
 class NewToDoPage extends StatefulWidget {
-  const NewToDoPage({super.key});
+  const NewToDoPage({super.key, required this.searchtext});
+  final String searchtext;
 
   @override
   State<NewToDoPage> createState() => _NewToDoPageState();
@@ -25,7 +26,7 @@ class _NewToDoPageState extends State<NewToDoPage> {
 
   @override
   void initState() {
-    tituloController.text = "";
+    tituloController.text = widget.searchtext;
     descController.text = "";
     dateController.text = "";
     super.initState();

@@ -84,7 +84,9 @@ class _ListPageState extends State<ListPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const NewToDoPage()));
+                                  builder: (context) => NewToDoPage(
+                                        searchtext: searchController.text,
+                                      )));
                         },
                         child: const Icon(Icons.add)),
                   )
