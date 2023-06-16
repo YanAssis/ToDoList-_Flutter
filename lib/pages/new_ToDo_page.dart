@@ -189,9 +189,6 @@ class _NewToDoPageState extends State<NewToDoPage> {
                           ),
                           keyboardType: TextInputType.name,
                           validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'Favor inserir a descrição da tarefa';
-                            }
                             return null;
                           },
                         ),
